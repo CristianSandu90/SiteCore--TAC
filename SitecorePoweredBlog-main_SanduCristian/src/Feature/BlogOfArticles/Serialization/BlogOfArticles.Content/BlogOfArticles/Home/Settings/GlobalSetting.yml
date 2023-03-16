@@ -1,0 +1,36 @@
+﻿---
+ID: "ed3e0771-85c6-4fac-ad67-d80d9df07a1a"
+Parent: "64f4b8be-fe40-43f4-bb86-611c6144362d"
+Template: "90e251aa-d64a-4ffc-8e79-a49264b9b92b"
+Path: /sitecore/content/BlogOfArticles/Home/Settings/GlobalSetting
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/32x32/folder2_blue.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230312T092944Z
+    - ID: "5c1a20c7-3b26-4726-b94f-dd3700d2736b"
+      Hint: Logo
+      Value: |
+        <image mediaid="{7D115D02-E391-452B-8CF6-CF98783B39C1}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "766dac24-8814-4c1c-9bd7-7bb8f828c5ef"
+      Hint: WebSiteHeading
+      Value: Welcome To <em><strong>Blog of Articles</strong></em> WebSite powered by SiteCore
+    - ID: "9ad68307-59ca-4ae9-80e7-ebbba366e7d7"
+      Hint: Copyright
+      Value: Copyright @ 2023
+    - ID: "ec184642-0890-46ee-be19-2782fcc37d64"
+      Hint: MyMultiListField
+      Type: Multilist
+      Value: 

@@ -1,0 +1,22 @@
+﻿---
+ID: "4ea8b58a-97c1-4a41-bdd4-bd0af16ed8c0"
+Parent: "e1c5aedf-f0a2-4e06-b04f-e1d49821d99a"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: /sitecore/layout/Renderings/BlogOfArticles/MainBodyFocused
+DB: master
+SharedFields:
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: /Views/BlogOfArticles/MainBodyFocused.cshtml
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230307T131022Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

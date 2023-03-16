@@ -1,0 +1,35 @@
+﻿---
+ID: "d726f1b9-35bb-467f-85c0-7e6fb36c5f21"
+Parent: "e1a56754-4600-497b-975f-e840dd79957a"
+Template: "e1a56754-4600-497b-975f-e840dd79957a"
+Path: /sitecore/templates/BlogOfArticles/BlogSettings/_Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/32x32/folder2_blue.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0c8acbcd-f32c-445f-8913-27e148ab07ac"
+      Hint: Heading
+      Value: SiteCore Powered Blog of Articles
+    - ID: "0cff296e-ebda-49ed-9f81-27a7b05b0f45"
+      Hint: SubHeading
+      Value: <em><strong>Blog of Articles&nbsp;</strong></em>powered by SiteCore
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230314T164924Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "bea61a36-d9ef-448d-a483-d7591e0a8201"
+      Hint: Logo
+      Value: |
+        <image mediaid="{EA90ACED-C576-4196-8144-68BEECB00EE8}" />
+    - ID: "dcd8fb28-fb64-45c2-8ee9-e4c04b5118c6"
+      Hint: Copyright
+      Value: Copyright @ 2023

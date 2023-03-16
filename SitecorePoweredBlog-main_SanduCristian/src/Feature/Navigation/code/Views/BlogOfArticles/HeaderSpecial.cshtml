@@ -1,0 +1,11 @@
+﻿@{ //var item = Sitecore.Context.Database.GetItem("/sitecore/content/Alexa/Home/Settings/GlobalSettings");
+    var item = Sitecore.Context.Database.GetItem("{ED3E0771-85C6-4FAC-AD67-D80D9DF07A1A}"); }
+
+<header>
+    <div class="container">
+        <div class="jumbotron text-white bg-primary" style="background-color: green !important;">
+            <h1 class="display-3">@Html.Sitecore().Field("Heading", item)</h1>
+            <p class="lead">@Html.Sitecore().Field("SubHeading", item)</p>
+        </div>
+    </div>
+</header>

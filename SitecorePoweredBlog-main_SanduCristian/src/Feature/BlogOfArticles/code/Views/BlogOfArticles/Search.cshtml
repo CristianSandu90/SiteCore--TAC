@@ -1,0 +1,72 @@
+﻿<main role="main" class="container blog-posts">
+    <div class="main-search">
+        <div class="input-group">
+            <input type="text" class="form-control" name="search" id="searchInput" placeholder="@Sitecore.Globalization.Translate.Text("SearchBlogsPlaceholderLabel")" required>
+            <div class="input-group-append">
+                <button class="favorite styled" type="button" id="searchButton">
+                    @Sitecore.Globalization.Translate.Text("SearchBlogsButtonLabel")
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<br />
+<br />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script>
+		$(document).ready(function () {
+			$("#searchButton").click(function (e) {
+				// debugger;
+				e.preventDefault();
+				$.ajax({
+					type: "GET",
+					datatype: "JSON", url: "@Url.Action("DoSearch", "BlogOfArticlesList")",
+					contentType: "application/json",
+					data: {
+						searchText: $("#searchInput").val()
+					},
+					success: function (result) {
+						var resultText = "";
+						$('#resultsItem').text(resultText);
+						//$('#resultsItem').append("Results from SOLR index <BR><BR>");
+						$(result.Results).each(function (index, item) {
+							// each iteration
+							var ReadButton = item.ReadButton;
+							var Tags = item.Tags;
+							var LongText = item.LongText;
+							var ShortText = item.ShortText;
+							var BigImageAlt = item.BigImageAlt;
+							var BigImage = item.BigImage;
+							var SmallImageAlt = item.SmallImageAlt;
+							var SmallImage = item.SmallImage;
+							var PostDate = item.PostDate;
+							var Category = item.Category;
+							var Title = item.Title;
+							var ItemPath = item.ItemPath;
+
+							//resultText += (index + 1) + " - " + Title + "; " + Category + "; " + Date + "; " + ShortText + "; " + LongText + "; " + Tags + "; " + SmallImage + "; " + BigImage + "; " + "<BR><BR>";
+                            resultText +=
+								"<div class='blog-post-card card col-lg-4 col-md-6'>" +
+								"<img src='" + SmallImage + "' alt='" + SmallImageAlt + "' />" +
+							"<div class='card-body bg-light'>" +
+							"<strong class='d-inline-block mb-2 text-success'>" + Category + "</strong>" +
+                                "<h3 class='card-title'>" + Title + "</h3>" +
+							"<div class='mb-1 text-muted'>" +
+							PostDate +
+                                "</div>" +
+							"<p>" + ShortText + "</p>" +
+							"<p class='btn btn-warning btn-block'><a href='" + ItemPath + "' style='color: white; text-decoration: none;'>" + ReadButton + "</a></p>" +
+                                "</div>" +
+                                "</div>";
+						});
+						$('#resultsItem').append(resultText);
+					},
+					error: function (result) {
+						alert('error');
+					}
+				});
+			});
+		});
+</script>

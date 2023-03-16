@@ -1,0 +1,25 @@
+﻿---
+ID: "0c8acbcd-f32c-445f-8913-27e148ab07ac"
+Parent: "7717971F-D049-4367-A023-7E01A018F189"
+Template: "455A3E98-A627-4B40-8035-E683A0331AC7"
+Path: /sitecore/templates/BlogOfArticles/BlogSettings/Header Section/Heading
+DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230306T133307Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

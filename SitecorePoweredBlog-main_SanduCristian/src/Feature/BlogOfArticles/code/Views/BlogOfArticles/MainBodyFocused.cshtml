@@ -1,0 +1,49 @@
+﻿@using System
+@using Sitecore.Mvc
+
+@{
+    var currentPage = Sitecore.Context.Item;
+    Sitecore.Data.Items.Item item = (Sitecore.Data.Items.Item)currentPage;
+
+    string category = "";
+    Sitecore.Data.Fields.ReferenceField droplinkField = item.Fields["Category"];
+    if (droplinkField != null && droplinkField.TargetItem != null)
+    {
+        Sitecore.Data.Items.Item targetItem = droplinkField.TargetItem; // here targetietm is the value in the Droplink field "Title" 
+        category = targetItem.Name;
+    }
+
+    List<string> tags = new List<string>();
+    Sitecore.Data.Fields.MultilistField multilistField = item.Fields["Tags"];
+    if (multilistField != null)
+    {
+        foreach (Sitecore.Data.Items.Item tempItem in multilistField.GetItems())
+        {
+            tags.Add(tempItem.Name);
+        }
+    }
+}
+
+<main role="main" class="container blog-post-detail">
+    <div class="row">
+        <div class="blog-post-detail-card card col-lg-12">
+            @Html.Sitecore().Field("BigImage")
+            <div class="card-body bg-light">
+                <strong class="d-inline-block mb-2 text-success">@category</strong>
+                <h3 class="card-title">@Html.Sitecore().Field("Title")</h3>
+                <div class="mb-1 text-muted">@Html.Sitecore().Field("PostDate", new { format = "MMM d, yyyy" })</div>
+                @Html.Sitecore().Field("LongText")
+
+                <div class="blog-detail-tag-list">
+                    <span class="read-more-heading">Read more: </span>
+                    @{ 
+                        foreach (string tag in tags)
+                        {
+                            <a class="btn btn-info" href="#" role="button">@tag</a>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

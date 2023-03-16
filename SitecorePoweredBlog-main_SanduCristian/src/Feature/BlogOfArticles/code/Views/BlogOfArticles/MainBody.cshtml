@@ -1,0 +1,45 @@
+﻿@using Sitecore.Data.Items;
+@using Sitecore.Mvc
+
+@{
+    Item item = Sitecore.Context.Database.GetItem("{50E77F1A-E583-48E1-BAC0-95A644C8ED78}");
+    Item[] items = item.Axes.GetDescendants();
+
+    <main role="main" class="container blog-posts" style="max-height: 1000px; overflow-y: auto;">
+
+        <div class="row" id="resultsItem">
+            <!-- Begin Repeating Elements Area -->
+            @foreach (Item it in items)
+            {<!-- Begin Repeating Element -->
+
+                string category = "";
+                Sitecore.Data.Fields.ReferenceField droplinkField = it.Fields["Category"];
+                if (droplinkField != null && droplinkField.TargetItem != null)
+                {
+                    Sitecore.Data.Items.Item targetItem = droplinkField.TargetItem; // here targetietm is the value in the Droplink field "Title" 
+                    category = targetItem.Name;
+                }
+
+                <div class="blog-post-card card col-lg-4 col-md-6">
+                    @Html.Sitecore().Field("SmallImage", it)
+                    <div class="card-body bg-light">
+                        <strong class="d-inline-block mb-2 text-success">@category</strong>
+                        <h3 class="card-title">@Html.Sitecore().Field("Title", it)</h3>
+                        <div class="mb-1 text-muted">
+                            @Html.Sitecore().Field("PostDate", it, new { format = "MMM d, yyyy" })
+                        </div>
+                        <p>@Html.Sitecore().Field("ShortText", it)</p>
+                        @{
+                            string url = Sitecore.Links.LinkManager.GetItemUrl(it);
+                        }
+                        <p class="btn btn-warning btn-block"><a href="@url" style="color: white; text-decoration: none;">@Sitecore.Globalization.Translate.Text("ArticleReadButtonLabel")</a></p>
+                    </div>
+                </div>
+                <!-- End Repeating Element -->
+            }
+            <!-- End Repeating Elements Area -->
+        </div>
+    </main>
+
+    <br /> <br />
+}

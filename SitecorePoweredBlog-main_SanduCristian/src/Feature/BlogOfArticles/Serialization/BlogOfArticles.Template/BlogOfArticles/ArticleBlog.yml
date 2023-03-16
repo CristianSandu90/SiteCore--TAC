@@ -1,0 +1,17 @@
+﻿---
+ID: "be94dec9-e9ba-4289-8bb8-78cdeb0a8e87"
+Parent: "f5abc44e-fbc5-4ea0-93db-525b8a4c28bf"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/BlogOfArticles/ArticleBlog
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/32x32/contract.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Value: "20230314T113357:638143904372536342Z"
