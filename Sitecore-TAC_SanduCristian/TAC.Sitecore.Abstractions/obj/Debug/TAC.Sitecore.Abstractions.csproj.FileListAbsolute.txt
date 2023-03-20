@@ -1,0 +1,6 @@
+C:\Projects\TAC\TAC.Sitecore.Abstractions\bin\Debug\TAC.Sitecore.Abstractions.dll
+C:\Projects\TAC\TAC.Sitecore.Abstractions\bin\Debug\TAC.Sitecore.Abstractions.pdb
+C:\Projects\TAC\TAC.Sitecore.Abstractions\obj\Debug\TAC.Sitecore.Abstractions.csproj.CoreCompileInputs.cache
+C:\Projects\TAC\TAC.Sitecore.Abstractions\obj\Debug\TAC.Sitecore.Abstractions.dll
+C:\Projects\TAC\TAC.Sitecore.Abstractions\obj\Debug\TAC.Sitecore.Abstractions.pdb
+C:\Projects\TAC\TAC.Sitecore.Abstractions\obj\Debug\TAC.Sitecore.Abstractions.csproj.AssemblyReference.cache

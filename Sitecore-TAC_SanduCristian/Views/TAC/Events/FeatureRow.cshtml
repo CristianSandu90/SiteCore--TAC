@@ -1,0 +1,12 @@
+﻿<div class="row">
+    @Html.Sitecore().DynamicPlaceholder("feature_spot", CreateDivWrap, 3, 4)
+</div>
+
+@functions{
+    TagBuilder CreateDivWrap(DynamicPlaceholderRenderContext context)
+    {
+        var tagBuilder = new TagBuilder("div");
+        int[] widths = new int[] { 0, 12, 6, 4, 3 };
+        tagBuilder.AddCssClass("col-sm-" + widths[context.PlaceholdersCount]);
+        return tagBuilder;
+    }}
